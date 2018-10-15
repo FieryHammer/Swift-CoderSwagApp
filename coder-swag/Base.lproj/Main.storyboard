@@ -79,17 +79,17 @@
                     <navigationItem key="navigationItem" title="CODERSWAG" id="q5k-CC-SUc"/>
                     <connections>
                         <outlet property="categoryTable" destination="wzs-wk-zae" id="cYX-4P-dVu"/>
-                        <segue destination="OOV-QL-pjf" kind="show" id="9zv-FG-rWX"/>
+                        <segue destination="OOV-QL-pjf" kind="show" identifier="ProductsVC" id="9zv-FG-rWX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1071.2" y="132.68365817091455"/>
         </scene>
-        <!--View Controller-->
+        <!--ProductsVC-->
         <scene sceneID="OtL-pD-QlL">
             <objects>
-                <viewController id="OOV-QL-pjf" sceneMemberID="viewController">
+                <viewController id="OOV-QL-pjf" customClass="ProductsVC" customModule="coder_swag" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ajI-Wc-CXo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -106,6 +106,7 @@
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dqn-F7-hyu">
                                 <rect key="frame" x="0.0" y="84" width="375" height="519"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="l0r-Kp-Oug">
                                     <size key="itemSize" width="178" height="262"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -113,7 +114,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="kdh-Gz-cxK" customClass="ProductCell" customModule="coder_swag" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="ProductCell" id="kdh-Gz-cxK" customClass="ProductCell" customModule="coder_swag" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="178" height="262"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -140,6 +141,7 @@
                                                 </label>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="Tdx-tS-Fvr" secondAttribute="trailing" id="2yt-kC-jHB"/>
                                             <constraint firstItem="yqY-nE-yb0" firstAttribute="leading" secondItem="kdh-Gz-cxK" secondAttribute="leading" constant="5" id="5jB-It-qXM"/>
@@ -172,6 +174,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Z8-2v-t6O"/>
                     </view>
+                    <connections>
+                        <outlet property="productsCollection" destination="dqn-F7-hyu" id="oH8-7Q-ViZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xYu-2i-QhH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
